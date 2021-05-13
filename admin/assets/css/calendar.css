@@ -187,16 +187,18 @@ th i {
 }
 
 @media (max-width: 1024px){
-
+    #wrapper {
+        width: 80%;
+    }
 
     .weekdays div {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .status-filter{
-        margin-left: 20vw;
+        margin-left: 24.5vw;
     }
     table {
-        width: 65%;
+        width: 73%;
         margin-right: 17px;
         font-size: 0.7rem;
     }
