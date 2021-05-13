@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/panel.css">
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/slick-slider/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/slick-slider/slick/slick-theme.css"/>
+    <title>Panel</title>
+    <style type="text/css">
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="home.html">
+                            <span><i class="fa fa-home"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">
+                            <span><i class="fa fa-image"></i></span>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reservations.html">
+                            <span><i class="fa fa-calendar"></i></span>
+                            <span>Reservations</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="prices.html">
+                            <span>₾</span>
+                            <span>Prices</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <span><i class="fa fa-envelope"></i></span>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info.html">
+                            <span><i class="fa fa-info"></i></span>
+                            <span>Info</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        <div class="admin-menu">
+           <div class="pic-holder">
+            <img class="avatar" src="https://ath2.unileverservices.com/wp-content/uploads/sites/4/2020/04/pink-egirl-streaks-819x1024.jpg" alt="admin-pic">
+           </div>
+           <div class="icon-cont"> <i class="fa fa-angle-double-down"></i></div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="change-password.html"><span><i class="fa fa-key"></i></span><span>Change password</span></a></li>
+                <li><a href="#"><span><i class="fa fa-sign-out"></i></span><span>Logout</span></a></li>
+            </ul>
+        </div>
+            <div class="fa fa-plus-square" id="add-photo"></div>
+            <div class="myModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <label for="photo-link"></label>
+                    <input type="url" id="photo-link" name="photo-link" placeholder="Insert Photo Link Here">
+                    <label for="upload-photo">Upload photo:</label>
+                    <input type="file" id="upload-photo" onchange="preview_image(event, 'add-photo-upload' )">
+                    <img id="add-photo-upload" alt="">
+                    <button>submit</button>
+                </div>
+            </div>
+
+        <div class="slideshow-container">
+            <div class="main-slider-item">
+
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature1.jpg" alt=""></a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature2.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature3.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature4.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item" alt="">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature1.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature2.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature3.jpg" alt="">
+                </a>
+            </div>
+            <div class="main-slider-item">
+                <a href="#">
+                    <button onclick="document.location='editphoto.html'"><i class="fa fa-edit" style="font-size:24px"></i></button>
+                    <button class="deletePhoto"><i class="fa fa-trash-o" style="font-size:24px"></i></button>
+                    <img src="../assets/images/nature4.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <section id="about-me-wrapper">
+            <h1>About Me</h1>
+            <div id="about">
+                <div id="filler_bottom"></div>
+                <div id="about-photo-item">
+                    <input type="file" accept="image/*" onchange="preview_image(event, 'output_image')" id="upload" hidden/>
+                    <label for="upload" class="fa fa-upload" id="upload-button"> Upload</label>
+                    <img id="output_image" src="../assets/images/owner.jpg" alt="">
+                </div>
+                <div id="about-text-item">
+                    <label for="about-input">Edit:</label>
+                    <input type="text" class="tinymce" id="about-input">
+                    <button id="save-button">Save <i class="fa fa-save"></i></button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+<script src="assets/js/panel.js"></script>
+<script src="../assets/js/jquery-1.11.0.min.js"></script>
+<script src="../assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="../assets/plugins/slick-slider/slick/slick.min.js"></script>
+<script src="assets/js/slideshow.js"></script>
+<script src="assets/additional-plugins/tinymce/jquery.tinymce.min.js"></script>
+<script src="assets/additional-plugins/tinymce/tinymce.min.js"></script>
+<script src="assets/js/tinymce.configs.js"></script>
+<script src="assets/js/imgPreview.js"></script>
+<script>
+// onclick modal
+
+// Get the modal window
+const modal = document.querySelector(".myModal");
+document.querySelector("#add-photo").onclick = function (){
+    modal.classList.add("openModal")
+};
+document.querySelector(".close").onclick = function () {
+    modal.classList.remove("openModal");
+};
+
+//optional function:
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// };
+</script>
+</html>

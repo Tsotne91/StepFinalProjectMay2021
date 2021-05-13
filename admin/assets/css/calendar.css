@@ -1,0 +1,170 @@
+#wrapper {
+    color: var(--main-color);
+    padding: 150px 50px 60px;
+    width: 84%;
+    float: right;
+}
+#wrapper h1 {
+    padding: 20px;
+    font-size: 60px;
+}
+:root {
+    --cal-background: rgb(77, 97, 123);
+}
+.days, .extraDays {
+    min-height: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    flex: 1;
+    margin: 5px;
+    color: white;
+    font-size: 30px;
+    position:relative;
+}
+.days {
+    background-color: var(--cal-background);
+    transition: max-height 1.5s;
+}
+.days>span {
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    background-color: black;
+}
+.days>span:hover {
+    cursor: auto;
+}
+.openDay {
+    min-height: auto;
+    max-height: 600px;
+}
+.openDay .button {
+    transform: rotate(180deg);
+}
+.openDay .slot-wrapper {
+    opacity: 1;
+}
+.button {
+    color: white;
+    float: right;
+    position: relative;
+    top: 8px;
+    font-size: 35px;
+}
+.button:hover {
+    cursor: pointer;
+}
+.extraDays {
+    background-color: rgb(144, 167, 194);
+}
+/*.days:hover {*/
+/*    background-color: var(--main-color);*/
+/*    cursor: pointer;*/
+/*}*/
+.days:hover .reserved{
+    background-color: black;
+}
+.slots {
+    border-top: 1px solid darkgray;
+    font-size: 12px;
+    padding: 8px;
+}
+.slot-wrapper{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.reserved {
+    background-color: var(--main-color);
+}
+.reserved:hover {
+    cursor: auto;
+}
+.weeks{
+        display: flex;
+        flex-direction: row;
+}
+.weekdays{
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+}
+.weekdays div {
+        flex: 1;
+        font-size: 30px;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 15px;
+        font-weight: bold;
+}
+
+.status-filter {
+    margin-left: 17vw;
+    font-family: Arial, serif;
+    float: left;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.date-filter {
+    margin-left: 1vw;
+    float: left;
+    padding: 1rem;
+}
+.date-filter select{
+    position: relative;
+    bottom: 10px;
+}
+.status-filter select {
+    position: relative;
+    bottom: 10px;
+    right: 7px;
+}
+.status-filter select, .date-filter select {
+    width: 8.5rem;
+    height: 3rem;
+    background-color: #4D617B;
+    color: white;
+    font-size: 20px;
+}
+
+table {
+    width: 82%;
+    border: solid black 1px;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    float: right;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+th {
+    background-color: var(--cal-background);
+    color: white;
+}
+th:first-child, td:first-child {
+    padding-left: 5px;
+}
+th, td {
+    border-bottom: solid black 1px;
+    height: 4vw;
+}
+.approve-button, .decline-button {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid black 1px;
+}
+.approve-button {
+    color: #0ca70c;
+}
+.decline-button {
+    color: #c60101;
+    padding-bottom: 3px;
+}
+th i {
+    position: relative;
+    bottom: 3px;
+}

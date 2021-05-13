@@ -1,0 +1,307 @@
+.wrapper {
+    width: calc(100vw - 265px);
+    margin-left: 250px;
+}
+
+.wrapper > h1 {
+    text-align: center;
+}
+
+.packages-cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.package-cont {
+    position: relative;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 15px;
+    padding: 10px;
+    width: 200px;
+    transition: 0.4s ease-out;
+    cursor: pointer;
+}
+
+.package-cont > button {
+    position: absolute;
+    top: 5px;
+    border: none;
+    color: var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.edit {
+    left: 10px;
+}
+
+.delete {
+    right: 10px;
+}
+
+.package-cont > button i {
+    font-size: 24px;
+}
+
+.package-cont:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.package-cont:hover button {
+    color: white;
+}
+
+.package-cont:hover h1 {
+    border-color: white;
+}
+
+.condition {
+    font-weight: bold;
+}
+
+.package-desc h2 {
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+}
+
+.package-cont > h1 {
+    margin-top: 15px;
+    text-align: center;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-content p {
+      margin-top: 15px;
+  }
+
+  .modal-content label {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-left: 35px;
+}
+
+ .modal-content input {
+    display: block;
+    margin: auto;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--main-color);
+    padding: 5px;
+ }
+
+  .modal-content button {
+      display: block;
+      margin: 20px auto;
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      color: white;
+      background-color: var(--main-color);
+      cursor: pointer;
+  }
+
+  .plus-cont {
+      position: absolute;
+      top: 30px;
+      left: 270px;
+      background-color: var(--main-color);
+      color: white;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+
+  .plus-cont i {
+      font-size: 24px;
+  }
+
+
+  .plusModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .plusModal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* The Close Button */
+  .plusClose {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .plusClose:hover,
+  .plusClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .plusModal-content p {
+      margin-top: 15px;
+  }
+
+  .plusModal-content label {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-left: 35px;
+}
+
+ .plusModal-content input {
+    display: block;
+    margin: auto;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid var(--main-color);
+    padding: 5px;
+ }
+
+  .plusModal-content button {
+      display: block;
+      margin: 20px auto;
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 4px;
+      color: white;
+      background-color: var(--main-color);
+      cursor: pointer;
+  }
+
+  .deleteModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;  /*10% from the top and centered*/ 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content p {
+      margin-top: 30px;
+  }
+  
+  /* The Close Button */
+  .deleteClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .deleteClose:hover,
+  .deleteClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button-cont {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .button-cont button {
+    display: block;
+    width: 100px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+  }

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reservations.css">
+    <title>Reservations</title>
+</head>
+<body>
+    <header>
+        <div id="arrow-icon">
+            <i class="fa fa-angle-double-down"></i>
+        </div>
+        <nav>
+            <div id="filler">
+
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="reservations.html" class="active-nav">Reservations</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="language-panel">
+                <div class="flag"><img src="assets/images/static/us.svg" alt="en"></div>
+                <div class="flag active"><img src="assets/images/static/ge.svg" alt="geo"></div>
+                <div class="flag"><img src="assets/images/static/ru.svg" alt="ru"></div>
+            </div>
+        </nav>
+
+        <nav class="mobile-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="reservations.html" class="active-nav">Reservations</a></li>
+                <li><a href="prices.html">Prices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="language-panel">
+                <div class="flag"><img src="assets/images/static/us.svg" alt="en"></div>
+                <div class="flag active"><img src="assets/images/static/ge.svg" alt="geo"></div>
+                <div class="flag"><img src="assets/images/static/ru.svg" alt="ru"></div>
+            </div>
+        </nav>
+    </header>
+
+
+<div id="background">
+    <div id="wrapper" >
+        <h1><i class="fa fa-calendar" style="font-size:48px;"></i> November 2020</h1>
+        <div class="weekdays">
+            <div> Monday </div>
+            <div> Tuesday </div>
+            <div> Wednesday</div>
+            <div> Thursday </div>
+            <div> Friday </div>
+            <div> Saturday </div>
+            <div> Sunday </div>
+        </div>
+
+        <!-- The Modal -->
+        <div class="myModal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="dateSelected"></span>
+                <span class="close">&times;</span>
+                <form> <!-- action="/action_page.php" -->
+
+                    <input type="text" id="name" name="name" placeholder="სახელი გვარი"><br>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}" placeholder="555-55-55-55"><br>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com"><br>
+                    <!-- <input type="time" id="appt" name="appt"><br> -->
+                    <div class="modalSelect"><label for="time">დრო:</label>
+                    <select id="time" name="time">
+                        <option value="8:00">8:00</option>
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                        <option value="20:00">20:00</option>
+                        <option value="21:00">21:00</option>
+                    </select></div>
+                    <div class="modalSelect"><label for="city">ქალაქი:</label>
+                    <select id="city" name="city">
+                        <option value="Tbilisi">თბილისი</option>
+                        <option value="Kutaisi">ქუთაისი</option>
+                        <option value="Batumi">ბათუმი</option>
+                    </select></div>
+                    <div class="modalSelect"><label for="package">პაკეტი:</label>
+                    <select id="package" name="package">
+                        <option value="Basic">Basic</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Gold">Gold</option>
+                    </select></div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div>
+
+
+        <div class="weeks">
+            <div class="days" data-date="1/11/2020"> <div class="mobileWeekdays">Mon</div>
+                <span>1<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                <div class="slots">8:00-9:00</div>
+                <div class="slots">9:00-10:00</div>
+                <div class="slots">10:00-11:00</div>
+                <div class="slots">11:00-12:00</div>
+                <div class="slots">12:00-13:00</div>
+                <div class="slots">13:00-14:00</div>
+                <div class="slots">14:00-15:00</div>
+                <div class="slots">15:00-16:00</div>
+                <div class="slots">16:00-17:00</div>
+                <div class="slots">17:00-18:00</div>
+                <div class="slots">18:00-19:00</div>
+                <div class="slots">19:00-20:00</div>
+                <div class="slots">20:00-21:00</div>
+                <div class="slots">21:00-22:00</div>
+                </div>
+
+            </div>
+            <div class="days" data-date="2/11/2020"> <div class="mobileWeekdays">Tue</div>
+                <span>2<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="3/11/2020"> <div class="mobileWeekdays">Wed</div>
+                <span>3<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days reserved" data-date="4/11/2020"> <div class="mobileWeekdays">Thu</div>
+                <span>4<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="5/11/2020"> <div class="mobileWeekdays">Fri</div>
+                <span>5<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots reserved">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots reserved">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="6/11/2020"> <div class="mobileWeekdays">Sat</div>
+                <span>6<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="7/11/2020"> <div class="mobileWeekdays">Sun</div>
+                <span>7<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+    </div>
+        <div class="weeks">
+            <div class="days" data-date="8/11/2020"> <div class="mobileWeekdays">Mon</div>
+                <span>8<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="9/11/2020"> <div class="mobileWeekdays">Tue</div>
+                <span>9<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days reserved" data-date="10/11/2020"> <div class="mobileWeekdays">Wed</div>
+                <span>10<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="11/11/2020"> <div class="mobileWeekdays">Thu</div>
+                <span>11<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="12/11/2020"> <div class="mobileWeekdays">Fri</div>
+                <span>12<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="13/11/2020"> <div class="mobileWeekdays">Sat</div>
+                <span>13<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="14/11/2020"> <div class="mobileWeekdays">Sun</div>
+                <span>14<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="weeks">
+            <div class="days" data-date="15/11/2020"> <div class="mobileWeekdays">Mon</div>
+                <span>15<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="16/11/2020"> <div class="mobileWeekdays">Tue</div>
+                <span>16<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="17/11/2020"> <div class="mobileWeekdays">Wed</div>
+                <span>17<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="18/11/2020"> <div class="mobileWeekdays">Thu</div>
+                <span>18<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="19/11/2020"> <div class="mobileWeekdays">Fri</div>
+                <span>19<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="20/11/2020"> <div class="mobileWeekdays">Sat</div>
+                <span>20<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="21/11/2020"> <div class="mobileWeekdays">Sun</div>
+                <span>21<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="weeks">
+            <div class="days" data-date="22/11/2020"> <div class="mobileWeekdays">Mon</div>
+                <span>22<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="23/11/2020"> <div class="mobileWeekdays">Tue</div>
+                <span>23<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="24/11/2020"> <div class="mobileWeekdays">Wed</div>
+                <span>24<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="25/11/2020"> <div class="mobileWeekdays">Thu</div>
+                <span>25<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                <div class="slots">8:00-9:00</div>
+                <div class="slots">9:00-10:00</div>
+                <div class="slots">10:00-11:00</div>
+                <div class="slots">11:00-12:00</div>
+                <div class="slots">12:00-13:00</div>
+                <div class="slots">13:00-14:00</div>
+                <div class="slots">14:00-15:00</div>
+                <div class="slots">15:00-16:00</div>
+                <div class="slots">16:00-17:00</div>
+                <div class="slots">17:00-18:00</div>
+                <div class="slots">18:00-19:00</div>
+                <div class="slots">19:00-20:00</div>
+                <div class="slots">20:00-21:00</div>
+                <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="26/11/2020"> <div class="mobileWeekdays">Fri</div>
+                <span>26<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="27/11/2020"> <div class="mobileWeekdays">Sat</div>
+                <span>27<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="28/11/2020"> <div class="mobileWeekdays">Sun</div>
+                <span>28<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="weeks">
+            <div class="days" data-date="29/11/2020"> <div class="mobileWeekdays">Mon</div>
+                <span>29<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="30/11/2020"> <div class="mobileWeekdays">Tue</div>
+                <span>30<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="days" data-date="31/11/2020"> <div class="mobileWeekdays">Wed</div>
+                <span>31<i class="fa fa-caret-down button"></i></span>
+                <div class="slot-wrapper">
+                    <div class="slots">8:00-9:00</div>
+                    <div class="slots">9:00-10:00</div>
+                    <div class="slots">10:00-11:00</div>
+                    <div class="slots">11:00-12:00</div>
+                    <div class="slots">12:00-13:00</div>
+                    <div class="slots">13:00-14:00</div>
+                    <div class="slots">14:00-15:00</div>
+                    <div class="slots">15:00-16:00</div>
+                    <div class="slots">16:00-17:00</div>
+                    <div class="slots">17:00-18:00</div>
+                    <div class="slots">18:00-19:00</div>
+                    <div class="slots">19:00-20:00</div>
+                    <div class="slots">20:00-21:00</div>
+                    <div class="slots">21:00-22:00</div>
+                </div>
+            </div>
+            <div class="extraDays"> 1
+
+            </div>
+            <div class="extraDays"> 2
+
+            </div>
+            <div class="extraDays"> 3
+
+            </div>
+            <div class="extraDays"> 4
+
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <div>555-555-555</div>
+    <div id="social-media">
+        <a href="#"><i class="fa fa-vk"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+     </div>
+    <div>example@gmail.com</div>
+</footer>
+
+</body>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/reservations.js"></script>
+</html>
